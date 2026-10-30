@@ -26,7 +26,7 @@ export const profile = {
   // Deja en '' lo que no quieras mostrar; solo aparecen los campos con valor.
   contact: {
     email: 'ericksanchezr09@gmail.com',
-    linkedin: '',
+    linkedin: 'https://www.linkedin.com/in/ericksanchezr/',
     github: 'https://github.com/Ericksanchezr',
   },
 }
