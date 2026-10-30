@@ -301,7 +301,8 @@ body[data-route='home'] .scrim::before {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: min(760px, 100%);
+  /* Sin tope fijo: el hero mide lo que su línea más ancha, así el nombre nunca se recorta. */
+  max-width: 100%;
   padding: calc(var(--header-h) + 24px) var(--gutter) 96px max(var(--gutter), env(safe-area-inset-left));
   pointer-events: none;
   transition:
@@ -1143,7 +1144,7 @@ body:not([data-route='home']) .hud__social a {
 
   /* Proporcional al ancho para que "Sanchez R." quepa completo en pantallas angostas. */
   .hero__title {
-    font-size: min(10.4vw, 4.6rem);
+    font-size: min(10vw, 4.6rem);
   }
 
   .hero__role {
