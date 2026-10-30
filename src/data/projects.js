@@ -91,6 +91,7 @@ export const projects = [
     year: 2026,
     status: 'En desarrollo',
     links: {
+      demo: 'https://portafolio-interactivo-chi.vercel.app',
       repo: 'https://github.com/Ericksanchezr/portafolio-interactivo',
     },
     color: '#8b7bff',

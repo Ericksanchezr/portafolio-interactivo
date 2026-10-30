@@ -1,4 +1,7 @@
-# Portafolio Interactivo 3D — Erick Sánchez
+# Portafolio Interactivo 3D — Erick A. Sanchez R.
+
+🔗 **Sitio (Vercel):** https://portafolio-interactivo-chi.vercel.app
+🔗 **Repositorio:** https://github.com/Ericksanchezr/portafolio-interactivo
 
 Portafolio personal construido con **Three.js** y **Vite**. Es un sistema orbital: el núcleo del centro te representa a ti y cada proyecto es un planeta en órbita. Al hacer click en un planeta, el sistema gira para presentarlo, la cámara viaja hasta él y se abre su ficha.
 
@@ -82,10 +85,9 @@ src/
 
 ## Publicarlo
 
-El build usa rutas relativas y navegación con hash, así que funciona en cualquier hosting estático sin configuración extra:
+El proyecto está conectado a Vercel vía Git: cada `git push` a `main` dispara un deploy automático a producción (Vercel detecta Vite: build `npm run build`, salida `dist`).
 
-- **Vercel** (como tu simulador de inversiones): importa el repositorio; Vercel detecta Vite solo (build `npm run build`, salida `dist`).
-- **Netlify** o **GitHub Pages:** publica la carpeta `dist/`.
+El build usa rutas relativas y navegación con hash, así que también funciona en cualquier otro hosting estático sin configuración extra, como **Netlify** o **GitHub Pages** (publicando la carpeta `dist/`).
 
 ## Rendimiento y accesibilidad
 
