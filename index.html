@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>{{name}} — {{role}}</title>
+    <meta name="description" content="Portafolio interactivo en 3D de {{name}}, {{role}}. {{tagline}}" />
+    <meta name="theme-color" content="#04050b" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{name}} — {{role}}" />
+    <meta property="og:description" content="{{tagline}}" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Syne:wght@600;700;800&display=swap"
+    />
+    <noscript>
+      <style>
+        .loader { display: none; }
+        .hero > *, .hero__word { opacity: 1 !important; transform: none !important; }
+      </style>
+    </noscript>
+  </head>
+  <body data-route="home">
+    <canvas class="webgl" data-webgl aria-hidden="true"></canvas>
+    <div class="scrim" aria-hidden="true"></div>
+    <div class="label-layer" data-labels aria-hidden="true"></div>
+
+    <header class="header" data-header>
+      <a class="brand" href="#/" aria-label="{{name}}, ir al inicio">
+        <span class="brand__mark" aria-hidden="true">{{initials}}</span>
+        <span class="brand__name">{{name}}</span>
+      </a>
+      <nav class="nav" aria-label="Principal">
+        <a class="nav__link" href="#/proyectos" data-nav="projects">Proyectos</a>
+        <a class="nav__link" href="#/sobre-mi" data-nav="about">Sobre mí</a>
+        <a class="nav__link" href="#/contacto" data-nav="contact">Contacto</a>
+      </nav>
+    </header>
+
+    <main class="hero" data-hero>
+      <p class="eyebrow hero__eyebrow">
+        <span class="pulse" aria-hidden="true"></span>
+        <span>Portafolio · <span data-year>2026</span></span>
+      </p>
+      <h1 class="hero__title" data-hero-title>{{name}}</h1>
+      <p class="hero__role">{{role}}</p>
+      <p class="hero__tagline">{{tagline}}</p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#/proyectos">
+          Explorar proyectos
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+        </a>
+        <a class="btn btn--ghost" href="#/sobre-mi">Sobre mí</a>
+      </div>
+    </main>
+
+    <aside class="panel" data-panel aria-labelledby="panel-heading" aria-hidden="true" inert>
+      <button class="panel__close" type="button" data-panel-close aria-label="Cerrar panel">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg>
+      </button>
+      <div class="panel__scroll" data-panel-scroll>
+        <div class="panel__content" data-panel-content></div>
+      </div>
+    </aside>
+
+    <footer class="hud">
+      <p class="hud__hint">
+        <span class="hud__icon" aria-hidden="true"></span>
+        <span data-hint-text>Arrastra para girar · Click en un planeta</span>
+      </p>
+      <div class="hud__right">
+        <p class="hud__count" data-count></p>
+        <div class="hud__social" data-social></div>
+      </div>
+    </footer>
+
+    <div class="loader" data-loader aria-hidden="true">
+      <span class="loader__mark">{{initials}}</span>
+      <span class="loader__bar"></span>
+    </div>
+
+    <noscript><p class="noscript">Este portafolio necesita JavaScript para mostrar la experiencia 3D.</p></noscript>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
